@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  # Types-only package (SPEC.md §7) — no runtime code beyond two trivial
+  # helpers and nothing that loads into a browser, so lint + typecheck +
+  # build + a pack dry-run is the whole story here. No e2e/Playwright tier
+  # like aquilifer-ext's own CI, and no release job — publishing stays a
+  # deliberate manual step (SPEC.md §6) until there's a real npm account
+  # action behind it.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run compile
+      - run: npm run build
+      # Catches a broken `files`/`exports` entry in package.json (e.g. dist/
+      # missing something referenced) before it ever reaches npm publish,
+      # without actually publishing anything.
+      - run: npm pack --dry-run
