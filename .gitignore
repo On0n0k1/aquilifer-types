@@ -1,0 +1,21 @@
+SPEC.md
+
+# Local reference clone of aquilifer-ext (SPEC.md §4) — kept here purely so
+# a human or an agent has direct file access to read from while porting
+# types. Never a build/runtime dependency of the published package; pull it
+# fresh before every sync rather than trusting a stale checkout.
+aquilifer/
+
+node_modules
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
