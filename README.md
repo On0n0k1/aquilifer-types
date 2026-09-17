@@ -6,8 +6,7 @@ page-facing global the [Aquilifer](https://github.com/On0n0k1/aquilifer)
 browser extension injects into any site it's connected to.
 
 > **Status: early development, not yet published.** This package isn't on
-> npm yet — see [SPEC.md](./SPEC.md) for what's decided and what's still
-> open.
+> npm yet.
 
 ## What this is
 
@@ -134,10 +133,10 @@ shipped bundle beyond what you actually call.
 
 This package's types are hand-ported from
 [aquilifer-ext](https://github.com/On0n0k1/aquilifer)'s
-`lib/public-api.ts`, not generated or imported at build time — see
-[SPEC.md](./SPEC.md) §4 for how the two repos stay in sync, and why this
-is deliberately a separate repo with its own independent versioning
-rather than a monorepo package.
+`lib/public-api.ts`, not generated or imported at build time. It's
+deliberately a separate repo with its own independent versioning rather
+than a monorepo package, so a commit here only bumps this package's
+version when its own public surface actually changes.
 
 ## License
 
