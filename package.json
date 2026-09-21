@@ -2,7 +2,6 @@
   "name": "aquilifer-types",
   "description": "TypeScript types and tiny runtime helpers for window.aquilifer",
   "license": "Apache-2.0",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",

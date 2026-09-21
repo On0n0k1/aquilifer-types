@@ -1,12 +1,11 @@
 # aquilifer-types
 
+[![npm version](https://img.shields.io/npm/v/aquilifer-types.svg)](https://www.npmjs.com/package/aquilifer-types)
+
 TypeScript types and two tiny runtime helpers for
 [`window.aquilifer`](https://github.com/On0n0k1/aquilifer) — the
 page-facing global the [Aquilifer](https://github.com/On0n0k1/aquilifer)
 browser extension injects into any site it's connected to.
-
-> **Status: early development, not yet published.** This package isn't on
-> npm yet.
 
 ## What this is
 
