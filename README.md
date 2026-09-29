@@ -1,6 +1,7 @@
 # aquilifer-types
 
 [![npm version](https://img.shields.io/npm/v/aquilifer-types.svg)](https://www.npmjs.com/package/aquilifer-types)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/aflcbgcgkaenbkecookfmndjgmgdancg?label=extension)](https://chromewebstore.google.com/detail/aquilifer/aflcbgcgkaenbkecookfmndjgmgdancg)
 
 TypeScript types and two tiny runtime helpers for
 [`window.aquilifer`](https://github.com/On0n0k1/aquilifer) — the
@@ -12,15 +13,20 @@ browser extension injects into any site it's connected to.
 Aquilifer is a browser extension that acts as a MetaMask-style LLM
 provider: a website asks `window.aquilifer` for a chat completion, the
 extension holds the user's API key and enforces permissions/rate limits,
-and the website never sees the credential. This package ships the
-TypeScript types for that surface, so a site's own frontend code gets full
-typing without hand-copying shapes from documentation — plus two small
-helpers for the one existence check every integration needs.
+and the website never sees the credential. It's published on the
+[Chrome Web Store](https://chromewebstore.google.com/detail/aquilifer/aflcbgcgkaenbkecookfmndjgmgdancg).
+This package ships the TypeScript types for that surface, so a site's own
+frontend code gets full typing without hand-copying shapes from
+documentation — plus two small helpers for the one existence check every
+integration needs.
 
 **This is types and helpers only.** No transport, no SDK, nothing a
 backend can use — `window.aquilifer` only exists inside a browser tab
 where the extension is installed, so this package is frontend-only by
-nature.
+nature. Installing this package does not install the extension, and
+doesn't require it either: the types describe a global your users'
+browsers supply, so a site can compile against them whether or not any
+given visitor has Aquilifer.
 
 ## Install
 
